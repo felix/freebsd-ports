@@ -1,14 +1,17 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
 # $FreeBSD: head/databases/mysql56-server/Makefile 424398 2016-10-21 09:03:07Z ale $
 
-PORTNAME?=	mysql
+PORTNAME?=	mysql-wsrep
 PORTVERSION=	5.6.34
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
-MASTER_SITES=	MYSQL/MySQL-5.6
+MASTER_SITES=	http://releases.galeracluster.com/source/
+DISTFILES=	mysql-wsrep-5.6.34-25.18.tar.gz
+DISTNAME=	mysql-wsrep-5.6.34-25.18
 PKGNAMESUFFIX?=	56-server
+DATADIR=        ${PREFIX}/share/mysql
 
-MAINTAINER=	ale@FreeBSD.org
+MAINTAINER=	info@galeracluster.com
 COMMENT?=	Multithreaded SQL database (server)
 
 BROKEN_powerpc64=	Does not build
@@ -32,7 +35,8 @@ CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DINSTALL_SQLBENCHDIR="share/mysql" \
 		-DINSTALL_SUPPORTFILESDIR="share/mysql" \
 		-DWITH_EDITLINE=system \
-		-DWITH_LIBWRAP=1
+		-DWITH_LIBWRAP=1 \
+		-DWITH_WSREP=1
 
 SHEBANG_FILES=	scripts/*.pl* scripts/*.sh
 
@@ -64,7 +68,6 @@ MMAN1=		my_print_defaults.1 myisam_ftdump.1 myisamchk.1 myisamlog.1 myisampack.1
 		mysqld_multi.1 mysqld_safe.1 mysqldumpslow.1 mysqlhotcopy.1 mysqlman.1 \
 		mysqltest.1 perror.1 replace.1 resolve_stack_dump.1 resolveip.1
 
-CMAKE_ARGS+=	-DWITH_EMBEDDED_SERVER="ON"
 .else
 USES+=		libedit
 .endif

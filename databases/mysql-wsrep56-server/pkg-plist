@@ -23,7 +23,11 @@ bin/perror
 bin/replace
 bin/resolve_stack_dump
 bin/resolveip
-lib/mysql/libmysqld.a
+bin/wsrep_sst_common
+bin/wsrep_sst_mysqldump
+bin/wsrep_sst_rsync
+bin/wsrep_sst_xtrabackup
+bin/wsrep_sst_xtrabackup-v2
 lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth.so
 lib/mysql/plugin/auth_test_plugin.so
@@ -38,6 +42,8 @@ lib/mysql/plugin/semisync_master.so
 lib/mysql/plugin/semisync_slave.so
 lib/mysql/plugin/test_udf_services.so
 lib/mysql/plugin/validate_password.so
+lib/mysql/plugin/innodb_engine.so
+lib/mysql/plugin/libmemcached.so
 libexec/mysqld
 man/man1/my_print_defaults.1.gz
 man/man1/myisam_ftdump.1.gz
@@ -66,6 +72,7 @@ man/man1/replace.1.gz
 man/man1/resolve_stack_dump.1.gz
 man/man1/resolveip.1.gz
 man/man8/mysqld.8.gz
+share/mysql/wsrep_notify
 %%DATADIR%%/binary-configure
 %%DATADIR%%/bulgarian/errmsg.sys
 %%DATADIR%%/charsets/Index.xml
