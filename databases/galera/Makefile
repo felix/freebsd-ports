@@ -4,10 +4,10 @@
 PORTNAME=	galera
 PORTVERSION=	25.3.19
 DISTVERSIONPREFIX=	3-
-DISTVERSIONSUFFIX=.20161124.fc54588
+DISTVERSIONSUFFIX=.20161129.65ebc0c
 PORTREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	http://repos.codership.com/freebsd/source/
+MASTER_SITES=	http://www.galeracluster.com/freebsd-beta/
 
 MAINTAINER=	info@galeracluster.com
 COMMENT=	Synchronous multi-master replication engine
