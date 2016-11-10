@@ -16,6 +16,8 @@ BROKEN_powerpc64=	Does not build
 SLAVEDIRS=	databases/mysql56-client
 USES=		cmake shebangfix
 
+RUN_DEPENDS=	socat:net/socat lsof:sysutils/lsof netcat:net/netcat rsync:net/rsync
+
 CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DINSTALL_DOCREADMEDIR="share/doc/mysql" \
 		-DINSTALL_INCLUDEDIR="include/mysql" \
