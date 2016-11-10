@@ -1,6 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: head/databases/mysql56-server/Makefile 424398 2016-10-21 09:03:07Z ale $
-
 PORTNAME?=	mysql-wsrep
 PORTVERSION=	5.6.34
 PORTREVISION?=	0
@@ -38,7 +35,7 @@ CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DWITH_LIBWRAP=1 \
 		-DWITH_WSREP=1
 
-SHEBANG_FILES=	scripts/*.pl* scripts/*.sh
+SHEBANG_FILES=	scripts/*.pl* scripts/*.sh scripts/wsrep_sst_*
 
 .ifdef USE_MYSQL
 .error You have `USE_MYSQL' variable defined either in environment or in make(1) arguments. Please undefine and try again.
