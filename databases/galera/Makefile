@@ -24,10 +24,8 @@ GCC_LIBS=	"${LOCALBASE}/lib/${_GCC_BUILD_DEPENDS}"
 
 USE_LDCONFIG=	yes
 
-SCONS_ARGS=	-j 4
-
 LDFLAGS+=	-lboost_program_options -lboost_system
-MAKE_ARGS+=	--config=force
+MAKE_ARGS+=	--config=force system_asio=0 -j 4
 
 PLIST_FILES=	lib/libgalera_smm.so
 
