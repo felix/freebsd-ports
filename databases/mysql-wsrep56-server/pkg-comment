@@ -1,2 +1,2 @@
-wsrep-enabled multithreaded SQL database (server)
+Galera-replication-enabled version of MySQL (server)
 

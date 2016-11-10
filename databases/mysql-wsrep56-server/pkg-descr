@@ -3,6 +3,6 @@ MySQL is a very fast, multi-threaded, multi-user and robust SQL
 
 WWW: http://www.mysql.com/
 
-Built with wsrep patch.
+Built with wsrep patch to support replication using the Galera library.
 
 WWW: http://www.galeracluster.com/
