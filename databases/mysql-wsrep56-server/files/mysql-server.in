@@ -63,7 +63,7 @@ mysql_bootstrap()
        # Bootstrap the cluster, start the first node that initiate the cluster
        check_startmsgs && echo "Bootstrapping cluster"
        shift
-       $0 start $rc_extra_args --wsrep-new-cluster
+       $0 onestart $rc_extra_args --wsrep-new-cluster
 }
 
 mysql_create_auth_tables()
