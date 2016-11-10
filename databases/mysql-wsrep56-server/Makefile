@@ -9,7 +9,7 @@ PKGNAMESUFFIX?=	56-server
 DATADIR=        ${PREFIX}/share/mysql
 
 MAINTAINER=	info@galeracluster.com
-COMMENT?=	Galera-replication-enabled version of MySQL (server)
+COMMENT?=	A version of MySQL modified for Galera replication (server package)
 
 BROKEN_powerpc64=	Does not build
 
