@@ -19,8 +19,15 @@ BUILD_DEPENDS=	checkmk:devel/libcheck ${LOCALBASE}/include/boost/shared_ptr.hpp:
 
 USES=		execinfo python:build scons shebangfix ssl
 
+.include <bsd.port.options.mk>
+
+.if ${OSVERSION} < 1000000
 USE_GCC=	4.8+
 GCC_LIBS=	"${LOCALBASE}/lib/${_GCC_BUILD_DEPENDS}"
+.else
+CXX=            clang
+LDFLAGS+=       -lc++
+.endif
 
 USE_LDCONFIG=	yes
 
