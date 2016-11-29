@@ -2,12 +2,11 @@
 # $FreeBSD: head/databases/galera/Makefile 418767 2016-07-19 11:04:13Z mat $
 
 PORTNAME=	galera
-PORTVERSION=	25.3.19
+PORTVERSION=	25.3.20
 DISTVERSIONPREFIX=	3-
-DISTVERSIONSUFFIX=.20161129.65ebc0c
 PORTREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	http://www.galeracluster.com/freebsd-beta/
+MASTER_SITES=	http://releases.galeracluster.com/source/
 
 MAINTAINER=	info@galeracluster.com
 COMMENT=	Synchronous multi-master replication engine
@@ -32,7 +31,7 @@ LDFLAGS+=       -lc++
 USE_LDCONFIG=	yes
 
 LDFLAGS+=	-lboost_program_options -lboost_system
-MAKE_ARGS+=	--config=force system_asio=0 -j 4
+MAKE_ARGS+=	--config=force system_asio=0 deterministic_tests=1 -j 4
 
 PLIST_FILES=	lib/libgalera_smm.so
 

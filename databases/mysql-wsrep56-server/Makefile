@@ -1,10 +1,10 @@
 PORTNAME?=	mysql-wsrep
-PORTVERSION=	5.6.34
+PORTVERSION=	5.6.35
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://releases.galeracluster.com/source/
-DISTFILES=	mysql-wsrep-5.6.34-25.18.tar.gz
-DISTNAME=	mysql-wsrep-5.6.34-25.18
+DISTFILES=	mysql-wsrep-5.6.35-25.19.tar.gz
+DISTNAME=	mysql-wsrep-5.6.35-25.19
 PKGNAMESUFFIX?=	56-server
 DATADIR=        ${PREFIX}/share/mysql
 
